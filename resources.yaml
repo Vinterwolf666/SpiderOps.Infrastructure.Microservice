@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app-deployment
+  name: infras-ms-app
 spec:
   replicas: 1  # Número de réplicas
   selector:
     matchLabels:
-      app: my-app
+      app: infras-ms-app
   template:
     metadata:
       labels:
-        app: my-app
+        app: identity-ms-app
     spec:
       containers:
       - name: my-container
@@ -21,10 +21,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-app-service
+  name: infras-ms-app-service
 spec:
   selector:
-    app: my-app
+    app: infras-ms-app
   ports:
   - protocol: TCP
     port: 80
