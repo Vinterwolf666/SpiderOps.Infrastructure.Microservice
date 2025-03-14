@@ -7,7 +7,7 @@ on:
 
 env:
   GOOGLE_PROJECT_ID: ${{ secrets.GOOGLE_PROJECT_ID }}
-  GOOGLE_COMPUTE_ZONE: 'us-west1'  # Cambia a la zona de tu GKE
+  GOOGLE_COMPUTE_ZONE: 'us-west2'  # Cambia a la zona de tu GKE
   GOOGLE_CLUSTER_NAME: 'spiderops-cluster-3'  # Nombre de tu clúster de GKE
   IMAGE_NAME: 'infras_ms'  # Nombre de tu aplicación
   IMAGE_TAG: ${{ github.sha }}  # Usamos el commit hash para etiquetar la imagen
@@ -60,5 +60,5 @@ jobs:
       # Paso 8: Actualizar la imagen del Deployment -xssssss
       - name: Update Deployment with new image
         run: |
-          kubectl set image deployment/ifras-ms-app my-container=us-central1-docker.pkg.dev/$GOOGLE_PROJECT_ID/my-repo/$IMAGE_NAME:$IMAGE_TAG
+          kubectl set image deployment/infras-ms-app my-container=us-central1-docker.pkg.dev/$GOOGLE_PROJECT_ID/my-repo/$IMAGE_NAME:$IMAGE_TAG
           kubectl rollout status deployment/infras-ms-app
