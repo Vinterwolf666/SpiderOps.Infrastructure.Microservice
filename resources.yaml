@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: identity-ms-app
+        app: infras-ms-app
     spec:
       containers:
       - name: my-container
