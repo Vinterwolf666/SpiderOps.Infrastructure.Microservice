@@ -52,7 +52,7 @@ jobs:
       - name: Run SonarCloud analysis
         uses: SonarSource/sonarqube-scan-action@v5
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: 22275d66ec9a13c7c5810f1fa423675358c9a4ad
         with:
           args: >
             -Dsonar.projectKey=quality-ms_integration-ms
