@@ -1,3 +1,4 @@
 [[allowlist.files]]
 description = "Ignore configurationhost.config"
 path = "configurationhost.config"
+sonar.exclusions=**/appsettings.json
