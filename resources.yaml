@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: infras-ms-app
 spec:
-  replicas: 1  # Número de réplicas
+  replicas: 1  
   selector:
     matchLabels:
       app: infras-ms-app
